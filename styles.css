@@ -99,9 +99,34 @@ body {
 #numbers {
   border: 1px solid green;
   grid-area: numbers;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: 
+    "clr clr clr"
+    "_7 _8 _9"
+    "_4 _5 _6"
+    "_1 _2 _3"
+    "_0 _0 _0";
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
 }
 
 #operations {
   border: 1px solid orange;
   grid-area: operations;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: 
+    "divide"
+    "times"
+    "minus"
+    "plus"
+    "equals";
 }
