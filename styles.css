@@ -63,10 +63,14 @@ body {
 }
 
 #container {
-  border: 2px solid red;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: right;
   display: grid;
+  grid-gap: 5px;
   height: 200px;
   width: 150px;
+  padding: 10px;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:  
@@ -80,26 +84,22 @@ body {
 
 #disp {
   grid-area: disp;
-  border: 1px solid blue;
+  border-bottom: 1px solid black;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  padding-right: 10px;
 }
 
 #buttons {
   grid-area: buttons;
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: 
-    "numbers numbers numbers operations"
-    "numbers numbers numbers operations"
-    "numbers numbers numbers operations"
-    "numbers numbers numbers operations"
-    "numbers numbers numbers operations";
+  display: flex;
+  justify-content: space-between;
 }
 
 #numbers {
-  border: 1px solid green;
   grid-area: numbers;
   display: grid;
+  grid-gap: 5px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: 
@@ -108,19 +108,23 @@ body {
     "_4 _5 _6"
     "_1 _2 _3"
     "_0 _0 _0";
+    width: calc(75% - 2.5px);
 }
 
 .btns {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid green;
+  border: 1px solid black;
+  background: gray;
+  color: white;
+  border-radius: 4px;
 }
 
 #operations {
-  border: 1px solid orange;
   grid-area: operations;
   display: grid;
+  grid-gap: 5px;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: 
@@ -129,4 +133,5 @@ body {
     "minus"
     "plus"
     "equals";
+  width: calc(25% - 2.5px);
 }
