@@ -1,5 +1,5 @@
 // populate number buttons
-Array.from(Array(11)).forEach((a, i) => document.querySelector('#numbers').innerHTML += `<div class="btns" style="grid-area: ${i === 10 ? 'clr' : '_' + i}; ${i === 10 && 'background: blue;'}" id=${i === 10 ? 'clr' : '_' + i}>${i === 10 ? 'C' : i}</div>`)
+Array.from(Array(11)).forEach((a, i) => document.querySelector('#numbers').innerHTML += `<div class="btns" style="grid-area: ${i === 10 ? 'clr' : '_' + i};" id=${i === 10 ? 'clr' : '_' + i}>${i === 10 ? 'C' : i}</div>`)
 
 // populate operation buttons
 for(let i = 0; i < 5; i++) {
@@ -28,5 +28,11 @@ for(let i = 0; i < 5; i++) {
       break;
   }
 
-  document.querySelector('#operations').innerHTML += `<div class="btns" style="grid-area: ${op}; ${op === 'equals' && 'background: green;'}" id="${op}">${btn}</div>`
+  document.querySelector('#operations').innerHTML += `<div class="btns" style="grid-area: ${op};" id="${op}">${btn}</div>`
 }
+
+document.querySelectorAll('.btns').forEach(btn => {
+  btn.addEventListener('click', e => {
+    console.log(e.target.id)
+  })
+})

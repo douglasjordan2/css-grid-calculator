@@ -60,6 +60,8 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background: #F0F0F0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #container {
@@ -68,9 +70,10 @@ body {
   text-align: right;
   display: grid;
   grid-gap: 5px;
-  height: 200px;
-  width: 150px;
+  height: 500px;
+  width: 350px;
   padding: 10px;
+  font-size: 15px;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:  
@@ -88,18 +91,21 @@ body {
   width: calc(100% + 20px);
   margin-left: -10px;
   padding-right: 10px;
+  padding-top: 5px;
+  font-size: 4rem;
 }
 
 #buttons {
   grid-area: buttons;
   display: flex;
   justify-content: space-between;
+  margin-top: 5px;
 }
 
 #numbers {
   grid-area: numbers;
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: 
@@ -108,7 +114,15 @@ body {
     "_4 _5 _6"
     "_1 _2 _3"
     "_0 _0 _0";
-    width: calc(75% - 2.5px);
+    width: calc(75% - 5px);
+}
+
+#clr {
+  background: #3572DD;
+}
+
+#clr:hover {
+  background: #1c50a9;
 }
 
 .btns {
@@ -119,12 +133,30 @@ body {
   background: gray;
   color: white;
   border-radius: 4px;
+  background: #787878;
+  cursor: pointer;
+}
+
+.btns:hover {
+  background: #3B3B3B;
+}
+
+#equals {
+  background: #29D05F;
+}
+
+#equals:hover {
+  background: #1c9042;
+}
+
+.btns:active {
+  box-shadow: inset 0 0 10px black;
 }
 
 #operations {
   grid-area: operations;
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 10px;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: 
@@ -133,5 +165,5 @@ body {
     "minus"
     "plus"
     "equals";
-  width: calc(25% - 2.5px);
+  width: calc(25% - 5px);
 }
