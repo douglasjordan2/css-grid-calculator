@@ -31,6 +31,7 @@ for(let i = 0; i < 5; i++) {
   document.querySelector('#operations').innerHTML += `<div class="btns" style="grid-area: ${op};" id="${op}">${btn}</div>`
 }
 
+// calculations
 document.querySelectorAll('.btns').forEach(btn => {
   btn.addEventListener('click', e => {
     console.log(e.target.id)
